@@ -11,15 +11,23 @@
 	<groupId>com.api</groupId>
 	<artifactId>SampleRestApiDemom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>SampleRestApiDemom</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
+		<start-class>com.api.SampleRestApiDemomApplication</start-class>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+<exclusion>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-tomcat</artifactId>
+</exclusion>
+</exclusions>
 		</dependency>
 
 		<dependency>
